@@ -1,0 +1,117 @@
+:root{
+    --brown-color: #aa8a6e;
+    --blue-color: #1E2D39;
+    --white-color: #D9D7CE;
+    --red-color: #753337;
+}
+body, h1{
+    margin: 0;
+}
+header{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 1em;
+}
+
+span{
+    height: var(--line);
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: calc(var(--line) / 2);
+    transition:  transform 1s, opacity 0.5s, translate 0s 0s;
+    transform-origin: center;
+}
+
+.burgir{
+    --line: 8px;
+    display:block;
+    width: 40px;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--line);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0em;
+}
+
+menu li{
+    list-style: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    menu{
+        display: none;
+    }
+    .checkbox
+    {
+        display: none;
+    }
+    .burgir span {
+        height: var(--line);
+        width: 100%;
+        background-color: #000;
+        border-radius: calc(var(--line) / 2);
+        transition:  transform 1s, opacity 0.5s, translate 0s 0s;
+        transform-origin: center;
+    }
+    
+        .navbar:has(.checkbox:checked) .menu-toggle{
+            display: flex;
+        }
+        .checkbox {
+            display: none;
+        }
+    
+    .navbar:has(.checkbox:checked)
+    .burgir span:nth-of-type(1){
+        transform: translateY(200%) rotate(45deg);
+    }
+    .navbar:has(.checkbox:checked)
+    .burgir span:nth-of-type(2){
+        opacity: 0;
+    }
+    .navbar:has(.checkbox:checked)
+    .burgir span:nth-of-type(3){
+        transform: translateY(-200%) rotate(-45deg);
+    }
+    
+}
+
+article{
+    background-color: var(--brown-color);
+    color: var(--white-color);
+    padding: 2em;
+}
+
+h2{
+    color: var(--red-color);
+    margin: 0;
+}
+
+.splitter{
+    background-color: var(--blue-color);
+    height: 2em;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 1em;
+}
