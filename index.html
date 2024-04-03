@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Motosports</title>
+    <script src="javascript/script.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><h1><a href="index.html">Motosports, that I like</a></h1></div>
-            <menu>
-                <ul>
-                    <li><a href="gallery.html">Galerie</a></li>
-                    <li><a href="news.html">Zprávy</a></li>
-                    <li><a href="form.html">Kontakt</a></li>
-                </ul>
+            <div class="logo">
+                <h1>
+                    <a href="index.html">Motosports, that I like</a>
+                </h1>
+            </div>
+            <menu class="menu--toggle menu__is-active">
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="news.html">Zprávy</a></li>
+                <li><a href="form.html">Kontakt</a></li>
             </menu>
-            <label class="burgir">
-                <input class="checkbox" type="checkbox">
+            <div role="button" aria-label="hamburger button" class="burgir burgir--button">                <span></span>
                 <span></span>
                 <span></span>
-                <span></span>
-            </label>
+            </div>
         </nav>
     </header>
     <main>

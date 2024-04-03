@@ -14,7 +14,6 @@ body, h1{
 header{
     background-color: var(--blue-color);
     color: var(--white-color);
-    padding: 1em;
 }
 
 .img--responsive{
@@ -55,7 +54,8 @@ a{
 menu {
     display: flex;
     flex-direction: row;
-    padding: 0em;
+    padding: 0;
+    margin: 0;
 }
 
 menu li{
@@ -67,11 +67,13 @@ menu li{
 }
 .burgir{
     display: none;
+    padding: 1em;
 }
 
 .logo{
     display: flex;
     flex-grow: 0;
+    padding: 1em;
 }
 
 h1{
@@ -82,38 +84,60 @@ h1{
 }
 
 @media screen and (max-width: 768px) {
-    menu{
-        display: none;
-    }
     .burgir span {
         height: var(--line);
         width: 100%;
         background-color: var(--white-color);
         border-radius: calc(var(--line) / 2);
-        transition:  transform 1s, opacity 0.5s, translate 0s 0s;
-        transform-origin: center;
+        transition: transform .3s, opacity 0.2s .9s, 
+                    translate .4s .4s;
+        transform-origin: right center;
     }
     .burgir{
+        --line: 8px;
+        width: 40px;
+        aspect-ratio: 1/1;
         display: flex;
+        flex-direction: column;
+        gap: var(--line);
     }
 
-    .navbar:has(.checkbox:checked) .menu-toggle{
+    .burgir.menu__is-active span:nth-of-type(1) {
+        transform: translateY(200%)
+                   rotate(45deg);
+        translate: 160px;
+    }
+
+    .burgir.menu__is-active span:nth-of-type(2) {
+       transition: opacity 0.2s;
+       opacity: 1;
+    }
+
+    .burgir.menu__is-active span:nth-of-type(3) {
+        transform: translateY(calc(var(--line) * -2))
+                   rotate(-45deg);
+        translate: 160px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+    menu {
+        background-color: var(--blue-color);
+        position: absolute;
+        box-sizing: border-box;
         display: flex;
+        flex-direction: column;
+        top: 100%;
+        right: 0;
+        overflow: hidden;
+        transition: left 2.5s;
     }
-    
-    .navbar:has(.checkbox:checked)
-    .burgir span:nth-of-type(1){
-        transform: translateY(200%) rotate(45deg);
+    menu.menu__is-active {
+        display: none;
     }
-    .navbar:has(.checkbox:checked)
-    .burgir span:nth-of-type(2){
-        opacity: 0;
-    }
-    .navbar:has(.checkbox:checked)
-    .burgir span:nth-of-type(3){
-        transform: translateY(-200%) rotate(-45deg);
-    }
-    
+
+
 }
 
 article{
