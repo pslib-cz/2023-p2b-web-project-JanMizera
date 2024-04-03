@@ -4,6 +4,10 @@
     --white-color: #D9D7CE;
     --red-color: #753337;
 }
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
 body, h1{
     margin: 0;
 }
@@ -11,6 +15,12 @@ header{
     background-color: var(--blue-color);
     color: var(--white-color);
     padding: 1em;
+}
+
+.img--responsive{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 span{
@@ -52,30 +62,44 @@ menu li{
     list-style: none;
 }
 
+.checkbox{
+    display: none;
+}
+.burgir{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    flex-grow: 0;
+}
+
+h1{
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    font-size: 2rem;
+}
 
 @media screen and (max-width: 768px) {
     menu{
         display: none;
     }
-    .checkbox
-    {
-        display: none;
-    }
     .burgir span {
         height: var(--line);
         width: 100%;
-        background-color: #000;
+        background-color: var(--white-color);
         border-radius: calc(var(--line) / 2);
         transition:  transform 1s, opacity 0.5s, translate 0s 0s;
         transform-origin: center;
     }
-    
-        .navbar:has(.checkbox:checked) .menu-toggle{
-            display: flex;
-        }
-        .checkbox {
-            display: none;
-        }
+    .burgir{
+        display: flex;
+    }
+
+    .navbar:has(.checkbox:checked) .menu-toggle{
+        display: flex;
+    }
     
     .navbar:has(.checkbox:checked)
     .burgir span:nth-of-type(1){
@@ -103,15 +127,17 @@ h2{
     margin: 0;
 }
 
-.splitter{
-    background-color: var(--blue-color);
-    height: 2em;
-}
-
 footer{
     display: flex;
     justify-content: space-between;
     background-color: var(--blue-color);
     color: var(--white-color);
     padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.splitter{
+    background-color: var(--blue-color);
+    height: 2em;
 }
