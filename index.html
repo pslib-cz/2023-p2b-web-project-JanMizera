@@ -3,71 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Motosports</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="javascript/script.js"></script>
+    <title>Motosports</title>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h1>
+                <a href="index.html">Motosports, that I like</a>
+            </h1>
+        </div>
         <nav class="navbar">
-            <div class="logo">
-                <h1>
-                    <a href="index.html">Motosports, that I like</a>
-                </h1>
-            </div>
-            <menu class="menu--toggle menu__is-active">
+            <menu class="menu--toggle menu--is-active">
                 <li><a href="gallery.html">Galerie</a></li>
                 <li><a href="news.html">Zprávy</a></li>
                 <li><a href="form.html">Kontakt</a></li>
             </menu>
-            <div role="button" aria-label="hamburger button" class="burgir burgir--button">                <span></span>
+            <div role="button" aria-label="hamburger button" class="burgir burgir--button">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
     </header>
     <main>
-        <article class="main--background">
+        <article class="main-background">
             <picture>
                 <img class="img--responsive" src="imgs/index-background.jpg" alt="WRC rallye car vedle Formule 1(AI generated)">
             </picture>
         </article>
-        <article>
+        <article class="rallye">
             <h2>Rallye</h2>
-            <p>Rallye je sport, jehož srdcem a duší jsou adrenalin, dobrodružství a vášeň. Přináší tolik jedinečných prvků, které ho odlišují od jiných motoristických disciplín:</p>
-            <ol>
-                <li>Rychlost a technická náročnost: Rallye se odehrává  na různých typech povrchů, jako jsou šotoliny, bláto, sníh a asfalt. Je  to nejen o dosažení co nejvyšší rychlosti, ale také o zvládnutí  technicky náročných pasáží, ostrých zatáček a skoků.</li>
-                <li>Navigace a spoléhání na navigátora: Rallye je týmový  sport, kde řidič spoléhá na svého navigátora. Ten mu říká, kdy zatáčet,  jaké jsou podmínky na trati a kde jsou nebezpečné úseky. Tato  spolupráce je klíčová pro úspěch.</li>
-                <li>Neustálý kontakt s terénem: Rallyové vozy musí  zvládat různé podmínky a přizpůsobit se jim. To znamená, že řidiči jsou  neustále v kontaktu s terénem, sledují povrch, hledají optimální stopu a  reagují na okamžité změny.</li>
-                <li>Atmosféra a fanoušci: Rallye má jedinečnou  atmosféru. Fanoušci se shromažďují podél tratí, povzbuzují své oblíbené  týmy a tvoří nezapomenutelnou kulisu. Každá rallye má svou specifickou  atmosféru a charakter.</li>
-                <li>Historie a tradice: Rallye má bohatou historii a  tradici. Každá soutěž má své legendy, ikonické tratě a okamžiky, které  jsou zapsány do dějin motoristického sportu.</li>
-            </ol>
-            <p>Celkově je rallye o vášni pro rychlost, dovednostech, spolupráci a  adrenalinu. Je to sport, který zahrnuje všechny smysly a přináší  neopakovatelné zážitky pro řidiče, navigátory a fanoušky.</p>
-            <div class="rallye--gallery">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="rallye__gallery">
+                <div class="rallye__text">
+                    <p>Rallye je sport, jehož srdcem a duší jsou adrenalin, dobrodružství a vášeň. Přináší tolik jedinečných prvků, které ho odlišují od jiných motoristických disciplín:</p>
+                    <ol>
+                        <li>Rychlost a technická náročnost</li>
+                        <li>Navigace a spoléhání na navigátora</li>
+                        <li>Neustálý kontakt s terénem</li>
+                        <li>Atmosféra a fanoušci</li>
+                        <li>Historie a tradice</li>
+                    </ol>
+                    <p>Celkově je rallye o vášni pro rychlost, dovednostech, spolupráci a  adrenalinu. Je to sport, který zahrnuje všechny smysly a přináší  neopakovatelné zážitky pro řidiče, navigátory a fanoušky.</p>
+                </div>
+                <img class="img--responsive" src="imgs/skoda-fabia-wrc5-evo2.jpg" alt="Škoda Fabia WRC 5 Evo 2 na štěrku">
             </div>
         </article>
-        <div class="splitter"></div>
-        <article>
+        <article class="f1">
             <h2>Formule 1</h2>
-            <p>Formule 1 je jedním z nejprestižnějších motoristických sportů na světě. Její srdcem a duší jsou rychlost, technologie a soutěživost. Zde je podrobnější pohled na to, co Formuli 1 definuje:</p>
-            <ol>
-                <li>Rychlost: Formule 1 je synonymem pro extrémní rychlost. Tyto monoposty dosahují na rovných tratích rychlostí přes 300 km/h. Okamžik, kdy se vozy rozběhnou po startovní rovince, je naplněn adrenalinem a vzrušením.</li>
-                <li>Technologie: Formule 1 je laboratoří pro inovace v  automobilovém průmyslu. Týmy investují obrovské částky do vývoje  pokročilých technologií, jako jsou aerodynamika, hybridní pohonné  jednotky, pneumatiky a elektronika. Každý detail na voze je pečlivě  navržen a optimalizován.</li>
-                <li>Soutěživost: Každý tým a každý jezdec touží po  vítězství. Formule 1 je o nekompromisním souboji na trati. Jezdci se  perou o každou desetinu sekundy, každou zatáčku a každý metr. Každý  závod je jako šachová partie na limitu lidských schopností.</li>
-                <li>Historie a tradice: Formule 1 má bohatou historii,  která sahá až do 50. let 20. století. Legendární okruhy, jako je Monza,  Silverstone nebo Monte Carlo, jsou součástí této tradice. Každý závod má  svůj příběh a každý jezdec sní o tom stát se mistrem světa.</li>
-                <li>Fanoušci a atmosféra: Formule 1 přitahuje fanoušky z  celého světa. Okruhy jsou plné nadšených diváků, kteří povzbuzují své  oblíbené týmy. Atmosféra na Grand Prix je jedinečná a nezapomenutelná.</li>
-            </ol>
-            <p></p>
-            <div class="f1--gallery">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="f1__gallery">
+                <div class="f1__text">
+                    <p>Formule 1 je jedním z nejprestižnějších motoristických sportů na světě. Její srdcem a duší jsou rychlost, technologie a soutěživost. Zde je podrobnější pohled na to, co Formuli 1 definuje:</p>
+                    <ol>
+                        <li>Rychlost</li>
+                        <li>Technologie</li>
+                        <li>Soutěživost</li>
+                        <li>Historie a tradice</li>
+                        <li>Fanoušci a atmosféra</li>
+                    </ol>
+                    <p>Celkově je Formule 1 symbolem rychlosti, technické dokonalosti a  vášně pro motoristický sport. Je to svět, kde se snoubí umění,  inženýrství a soutěživost, a kde se rodí hrdinové na čtyřech kolech.</p>
+                </div>
+                <img class="img--responsive" src="imgs/yas-marina-start.jpg" alt="abu-dhabi gp 2023 start závodu">
             </div>
         </article>
     </main>
     <footer>
-        <a>Odkazy:</a>
+        <p>Odkazy:</p>
         <a>Rallye</a>
         <a>Formule 1</a>
     </footer>

@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector(".menu--toggle")
 
     let toggleMenu = () => {
-        button.classList.toggle("menu__is-active");
-        menu.classList.toggle("menu__is-active");
+        button.classList.toggle("menu--is-active");
+        menu.classList.toggle("menu--is-active");
     }
     button.addEventListener("click", toggleMenu);
 });

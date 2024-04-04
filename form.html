@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulář</title>
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/script.js"></script>
+    <title>Formulář</title>
 </head>
 <body>
     <header>
+        <div class="logo">
+                <a href="index.html">Motosports, that I like</a>
+        </div>
         <nav class="navbar">
-            <div class="logo"><h1><a href="index.html">Motosports, that I like</a></h1></div>
-            <menu>
-                <ul>
-                    <li><a href="gallery.html">Galerie</a></li>
-                    <li><a href="news.html">Zprávy</a></li>
-                    <li><a href="form.html">Kontakt</a></li>
-                </ul>
+            <menu class="menu--toggle menu--is-active">
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="news.html">Zprávy</a></li>
+                <li><a href="form.html">Kontakt</a></li>
             </menu>
-            <label class="burgir">
-                <input class="checkbox" type="checkbox">
+            <div role="button" aria-label="hamburger button" class="burgir burgir--button">
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>
+            </div>
         </nav>
     </header>
     <main>
-
+        <article>
+            <h1>Kontakt</h1>
+        </article>
     </main>
     <footer>
-        <a>Odkazy:</a>
+        <p>Odkazy:</p>
         <a>Rallye</a>
         <a>Formule 1</a>
     </footer>

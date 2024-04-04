@@ -11,6 +11,7 @@ html{
 body, h1{
     margin: 0;
 }
+
 header{
     background-color: var(--blue-color);
     color: var(--white-color);
@@ -20,6 +21,10 @@ header{
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+p{
+    font-size: 1rem + 0.25vw;
 }
 
 span{
@@ -73,15 +78,21 @@ menu li{
 
 .logo{
     display: flex;
-    flex-grow: 0;
     padding: 1em;
+    padding-left: 0.5em;
+    width: fit-content;
+    align-items: center;
 }
 
-h1{
+.logo h1{
     display: flex;
     flex-grow: 0;
     align-items: center;
-    font-size: 2rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -101,18 +112,18 @@ h1{
         gap: var(--line);
     }
 
-    .burgir.menu__is-active span:nth-of-type(1) {
+    .burgir.menu--is-active span:nth-of-type(1) {
         transform: rotate(45deg);
         width: var(--widht);
         translate: 0 calc(var(--line) / -2);
 
     }
 
-    .burgir.menu__is-active span:nth-of-type(2) {
+    .burgir.burgir.menu--is-active span:nth-of-type(2) {
         opacity: 0;
     }
 
-    .burgir.menu__is-active span:nth-of-type(3) {
+    .burgir.menu--is-active span:nth-of-type(3) {
         transform: rotate(-45deg);
         width: var(--widht);
         translate: 0 calc(var(--line) / 2);
@@ -132,17 +143,19 @@ h1{
         overflow: hidden;
         transition: left 2.5s;
     }
-    menu.menu__is-active {
+    menu.menu--is-active {
         display: none;
     }
-
-
 }
 
 article{
     background-color: var(--brown-color);
     color: var(--white-color);
-    padding: 2em;
+    padding: 1em;
+}
+
+h1{
+    color: var(--red-color);
 }
 
 h2{
@@ -153,6 +166,7 @@ h2{
 footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--blue-color);
     color: var(--white-color);
     padding: 1em;
@@ -160,11 +174,29 @@ footer{
     padding-right: 2em;
 }
 
-.splitter{
-    background-color: var(--blue-color);
-    height: 2em;
+.main-background{
+    padding: 0;
 }
 
-.main--background{
-    padding: 0;
+p, li, a{
+    font-size: calc(0.5rem + 0.5vw);
+}
+.logo a{
+    font-size: calc(1rem + 1.5vw);
+}
+
+h2 {
+    font-size: calc(1rem + 1.5vw);
+    
+}
+.f1{
+    border-top: 1em var(--blue-color) solid;
+}
+
+ol{
+    margin: 0.5em;
+}
+
+footer>a, footer>p{
+    font-size: calc(0.5rem + 2vw);
 }
