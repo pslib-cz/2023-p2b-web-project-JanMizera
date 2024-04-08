@@ -27,7 +27,7 @@
         </nav>
     </header>
     <main class="news__main">
-        <article>
+        <article class="article--longer">
             <h2>Zprávy</h2>
             <p>This page is currently under development. Our team works on this.</p>
             <picture>
@@ -35,10 +35,25 @@
             </picture>
         </article>
     </main>
-    <footer class="news__footer">
+    <footer>
         <p>Odkazy:</p>
-        <a>Rallye</a>
-        <a>Formule 1</a>
+        <a href="https://www.wrc.com/">Rallye</a>
+        <a href="https://www.formula1.com/">Formule 1</a>
     </footer>
 </body>
+<script type="module">
+    import lightgallery from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm'
+    import lgThumbnail from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/+esm'
+    import lgPager from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/pager/+esm'
+    import lgZoom from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/+esm'
+    import lgAutoplay from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/autoplay/+esm'
+
+    lightgallery(document.querySelector('.thumbnails'), 
+    {
+        selector: document.querySelectorAll('.thumbnails a'),
+        plugins: [lgThumbnail, lgPager, lgZoom, lgAutoplay],
+        slideShowAutoplay: true,
+        slideShowInterval:2000,
+    });
+</script>
 </html>

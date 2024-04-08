@@ -14,6 +14,9 @@ body, h1{
 header{
     background-color: var(--blue-color);
     color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    height: 4.5em;
 }
 
 .img--responsive{
@@ -24,10 +27,6 @@ header{
 
 main{
     background-color: var(--brown-color);
-}
-
-p{
-    font-size: 1rem + 0.25vw;
 }
 
 span{
@@ -52,7 +51,6 @@ span{
 
 .navbar {
     display: flex;
-    justify-content: space-between;
 }
 
 a{
@@ -64,11 +62,19 @@ menu {
     display: flex;
     flex-direction: row;
     padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0;
 }
 
 menu li{
+    display: flex;
     list-style: none;
+    margin: 1em;
+}
+
+menu a{
+    font-size: calc(1rem + 1.5vw);
 }
 
 .checkbox{
@@ -91,11 +97,6 @@ menu li{
     display: flex;
     flex-grow: 0;
     align-items: center;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -171,8 +172,12 @@ footer{
     align-items: center;
     background-color: var(--blue-color);
     color: var(--white-color);
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 1em;
+    height: 1em;
+}
+
+footer p{
+    margin: 0;
 }
 
 .main-background{
@@ -207,20 +212,94 @@ footer>a, footer>p{
     gap: 1em;
 }
 
+
+.article--longer{
+    height: calc(100vh - 4.5em - 3em - 2em);
+}
+
+
+
+form{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+label{
+    font-size: calc(1rem + 1vw);
+}
+
+form div{
+    display: grid;
+}
+
+form input{
+    background: none;
+    border: 0;
+    border-bottom: 2px solid var(--blue-color);
+}
+
+input:focus{
+    outline: none;
+}
+
+.form-fname input{
+    width: 33vw;
+}
+
+.form-lname input{
+    width: 50vw;
+}
+
+.form-email input{
+    width: 50vw;
+}
+
+.form-number input{
+    width: 33vw;
+}
+
+form input[type="submit"]{
+    background-color: var(--blue-color);
+    border: 0;
+    border: 2px solid var(--blue-color);
+    color: var(--white-color);
+}
+
 @media screen and (min-width: 768px) {
+    header li{
+        text-align: center;
+        padding: 0;
+        margin-left: 2em;
+        margin-right: 2em;
+        align-items: center;
+    }   
+    
+    .logo a{
+        font-size: calc(1em + 2.5s);
+    }
+
     .gallery{
         grid-template-columns: 1fr 1fr;
         align-items: center;
         margin: 0.5em;
     }
-}
 
-.news__main{
-    
-}
+    form{
+        gap: 2em;
+    }
 
-.news__footer{
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
+    .article--longer
+    {
+        height: auto;
+    }
+
+    .article--longer.article-form{
+        height: calc(100vh - 4.5em - 3em - 4em);
+    }
+
+    footer{
+        padding: 2em;
+    }
 }
