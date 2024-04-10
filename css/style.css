@@ -245,19 +245,23 @@ input:focus{
 }
 
 .form-fname input{
-    width: 33vw;
+    width: 50vw;
+    max-width: 160px;
 }
 
 .form-lname input{
-    width: 50vw;
+    width: 66vw;
+    max-width: 215px;
 }
 
 .form-email input{
-    width: 50vw;
+    width: 75vw;
+    max-width: 346px;
 }
 
 .form-number input{
-    width: 33vw;
+    width: 66vw;
+    max-width: 272px;
 }
 
 form input[type="submit"]{
@@ -265,6 +269,7 @@ form input[type="submit"]{
     border: 0;
     border: 2px solid var(--blue-color);
     color: var(--white-color);
+    font-size: calc(1rem + 1.5vw);
 }
 
 @media screen and (min-width: 768px) {
@@ -301,5 +306,9 @@ form input[type="submit"]{
 
     footer{
         padding: 2em;
+    }
+    
+    .f1{
+        border-top: 2em var(--blue-color) solid;
     }
 }
