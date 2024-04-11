@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/script.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
     <title>Motosports</title>
 </head>
 <body>
@@ -74,26 +73,4 @@
         <a href="https://www.formula1.com/">Formule 1</a>
     </footer>
 </body>
-<script type="module">
-    import lightgallery from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm'
-    import lgThumbnail from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/+esm'
-    import lgPager from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/pager/+esm'	
-    import lgZoom from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/+esm'
-    import lgAutoplay from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/autoplay/+esm'
-
-    lightgallery(document.querySelector('.gallery'), 
-    {
-        selector: document.querySelectorAll('.gallery div'),
-        plugins: [lgThumbnail, lgPager, lgZoom, lgAutoplay],
-        slideShowAutoplay: true,
-        slideShowInterval:2000,
-    });
-</script>
-<script src="../scripts/mobile_menu_size_watcher.js"></script>
-<script>
-    document.querySelector('.menu-activator').addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
-</script>
-</script>
 </html>
