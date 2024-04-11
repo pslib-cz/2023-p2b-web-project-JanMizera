@@ -55,20 +55,20 @@
         <a href="https://www.wrc.com/">Rallye</a>
         <a href="https://www.formula1.com/">Formule 1</a>
     </footer>
+    <script type="module">
+        import lightgallery from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm";
+        import lgThumbnail from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/+esm";
+        import lgZoom from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/+esm";
+        import lgAutoplay from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/autoplay/+esm";
+    
+        lightgallery(document.querySelector(".gallery"), {
+          selector: document.querySelectorAll(".gallery a"),
+          plugins: [lgThumbnail, lgZoom, lgAutoplay],
+          slideShowAutoplay: false,
+          slideShowInterval: 2000,
+          subHtmlSelectorRelative: false,
+          allowMediaOverlap: false,
+        });
+        </script>
 </body>
-<script type="module">
-    import lightgallery from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm";
-    import lgThumbnail from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/+esm";
-    import lgZoom from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/+esm";
-    import lgAutoplay from "https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/autoplay/+esm";
-
-    lightgallery(document.querySelector(".gallery"), {
-      selector: document.querySelectorAll(".gallery a"),
-      plugins: [lgThumbnail, lgZoom, lgAutoplay],
-      slideShowAutoplay: false,
-      slideShowInterval: 2000,
-      subHtmlSelectorRelative: false,
-      allowMediaOverlap: false,
-    });
-    </script>
 </html>
