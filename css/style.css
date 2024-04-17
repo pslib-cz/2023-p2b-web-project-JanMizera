@@ -11,11 +11,18 @@ html{
 body, h1{
     margin: 0;
 }
+body{
+    display: flex;
+    background-color: var(--brown-color);
+    flex-direction: column;
+    align-items: center;
+}
 header{
     background-color: var(--blue-color);
     color: var(--white-color);
     display: flex;
     justify-content: space-between;
+    width: 100%;
     height: 4.5em;
 }
 
@@ -26,7 +33,10 @@ header{
 }
 
 main{
-    background-color: var(--brown-color);
+    display: flex;
+    max-width: 60em;
+    flex-direction: column;
+    align-items: center;
 }
 
 span{
@@ -118,8 +128,9 @@ menu a{
 
     .burgir.menu--is-active span:nth-of-type(1) {
         transform: rotate(45deg);
-        width: var(--widht);    
+        width: var(--widht);
         translate: 0 calc(var(--line) / -2);
+
     }
 
     .burgir.burgir.menu--is-active span:nth-of-type(2) {
@@ -154,6 +165,10 @@ menu a{
 article{
     color: var(--white-color);
     padding: 1em;
+    max-width: 40em;
+}
+.main-background{
+    max-width: 60em;
 }
 
 h1{
@@ -172,7 +187,10 @@ footer{
     background-color: var(--blue-color);
     color: var(--white-color);
     padding: 1em;
+    padding-left: 0;
+    padding-right: 0;
     height: 1em;
+    width: 100%;
 }
 
 footer p{
@@ -184,7 +202,7 @@ footer p{
 }
 
 p, li, a{
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(1rem + 0.25vw);
 }
 .logo a{
     font-size: calc(1rem + 1.5vw);
@@ -213,7 +231,7 @@ footer>a, footer>p{
 
 
 .article--longer{
-    height: calc(100vh - 4.5em - 3em - 2em);
+    height: calc(100vh - 4.5em - 2em - 5em);
 }
 
 form{
@@ -242,23 +260,19 @@ input:focus{
 }
 
 .form-fname input{
-    width: 50vw;
-    max-width: 160px;
+    width: 33vw;
 }
 
 .form-lname input{
-    width: 66vw;
-    max-width: 215px;
+    width: 50vw;
 }
 
 .form-email input{
-    width: 75vw;
-    max-width: 346px;
+    width: 50vw;
 }
 
 .form-number input{
-    width: 66vw;
-    max-width: 272px;
+    width: 33vw;
 }
 
 form input[type="submit"]{
@@ -266,20 +280,27 @@ form input[type="submit"]{
     border: 0;
     border: 2px solid var(--blue-color);
     color: var(--white-color);
-    font-size: calc(1rem + 1.5vw);
 }
 
 @media screen and (min-width: 768px) {
     header li{
         text-align: center;
         padding: 0;
-        margin-left: 2em;
-        margin-right: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
         align-items: center;
     }   
     
+    p, li, a{
+        font-size: calc(1rem + 0.75vw);
+    }
+
+    .logo{
+        padding-right: 0;
+    }
+
     .logo a{
-        font-size: calc(0.5em + 1.75vw);
+        font-size: calc(1rem + 1.25vw);
     }
 
     .gallery{
@@ -292,20 +313,14 @@ form input[type="submit"]{
         gap: 2em;
     }
 
-    .article--longer
-    {
-        height: auto;
-    }
-
-    .article--longer.article-form{
-        height: calc(100vh - 4.5em - 3em - 4em);
-    }
-
     footer{
         padding: 2em;
+        padding-left: 0;
+        padding-right: 0;    
     }
-    
-    .f1{
-        border-top: 2em var(--blue-color) solid;
+
+    footer > p, footer > a{
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
