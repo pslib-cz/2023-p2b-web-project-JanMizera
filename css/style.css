@@ -213,6 +213,8 @@ ol{
 
 footer>a, footer>p{
     font-size: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .gallery{
@@ -298,16 +300,5 @@ form input[type="submit"]{
 
     form{
         gap: 2em;
-    }
-
-    footer{
-        padding: 2em;
-        padding-left: 0;
-        padding-right: 0;    
-    }
-
-    footer > p, footer > a{
-        padding-left: 1em;
-        padding-right: 1em;
     }
 }
