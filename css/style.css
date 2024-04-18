@@ -22,7 +22,7 @@ header{
     color: var(--white-color);
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: 4.5em;
 }
 
@@ -37,15 +37,6 @@ main{
     max-width: 60em;
     flex-direction: column;
     align-items: center;
-}
-
-span{
-    height: var(--line);
-    width: 100%;
-    background-color: var(--white-color);
-    border-radius: calc(var(--line) / 2);
-    transition:  transform 1s, opacity 0.5s, translate 0s 0s;
-    transform-origin: center;
 }
 
 .burgir{
@@ -80,11 +71,11 @@ menu {
 menu li{
     display: flex;
     list-style: none;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 menu a{
-    font-size: calc(1rem + 1.5vw);
+    font-size: 1rem;
 }
 
 .checkbox{
@@ -190,7 +181,7 @@ footer{
     padding-left: 0;
     padding-right: 0;
     height: 1em;
-    width: 100%;
+    width: 100vw;
 }
 
 footer p{
@@ -202,14 +193,14 @@ footer p{
 }
 
 p, li, a{
-    font-size: calc(1rem + 0.25vw);
+    font-size: 1rem;
 }
 .logo a{
-    font-size: calc(1rem + 1.5vw);
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-size: calc(1rem + 1.5vw);
+    font-size: 1rem;
     
 }
 .f1{
@@ -221,7 +212,7 @@ ol{
 }
 
 footer>a, footer>p{
-    font-size: calc(0.5rem + 2vw);
+    font-size: 1rem;
 }
 
 .gallery{
@@ -231,7 +222,7 @@ footer>a, footer>p{
 
 
 .article--longer{
-    height: calc(100vh - 4.5em - 2em - 5em);
+    height: calc(100vh - 4.5em - 2em - 3em);
 }
 
 form{
@@ -291,16 +282,12 @@ form input[type="submit"]{
         align-items: center;
     }   
     
-    p, li, a{
-        font-size: calc(1rem + 0.75vw);
+    .article--longer{
+        height: calc(100vh - 4.5em - 2em - 5em);
     }
 
     .logo{
         padding-right: 0;
-    }
-
-    .logo a{
-        font-size: calc(1rem + 1.25vw);
     }
 
     .gallery{
